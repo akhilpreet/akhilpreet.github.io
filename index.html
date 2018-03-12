@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Akhil's Portfolio</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link href="./style.css" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<div class="menuButton icon" onclick="showMenu()"><i class="fas fa-bars"></i></div>
+		<div class="nav hide" id="mobileMenu">
+			<div class="options">
+				<ul>
+					<li onclick="path('screenOne')">HOME</li>
+					<!-- <li>WORK</li> -->
+					<li onclick="path('screenTwo')">SERVICES</li>
+					<li onclick="path('screenThree')">CONTACT</li>
+				</ul>
+			</div>
+			<div class="logo">
+				<span>A.P.S.</span>
+			</div>
+		</div>
+	</header>
+	<article>
+		<div class="main">
+			<div class="home" id="screenOne">
+				<div class="heroImage">
+					<div class="heroImageText">
+						<p class="bannerText">Hi, I am Akhil.</p>
+						<div>
+							<span class="bannerText">I create</span> 
+							<div class="sliderFrame">
+								<div class="slidingText">
+									<span>Web Applications</span>
+									<span>User Interfaces</span>
+									<span>Business Solutions</span>
+									<span>Logos</span>
+									<span>Web Applications</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="services" id="screenTwo">
+				<div class="servicesContent">
+					<div class="container">
+						<div class="serviceCard">
+							<div class="serviceCardBox">
+								<h1>User Interface</h1>
+								<p>I believe in the concept of minimalism. It can make everything simple yet elegant. I create short, simple yet expressive User Interfaces.</p> 
+							</div>
+						</div>
+						<div class="serviceCard">
+							<div class="serviceCardBox">
+								<h1>Business Solutions</h1>
+								<p>You own some business? want to create some custom tools or applications to make your business more effective and efficient. I can help you with that !!!</p>
+							</div>
+						</div>
+						<div class="serviceCard">
+							<div class="serviceCardBox">
+								<h1>Web Applications</h1>
+								<p>Got an awesome idea for an application, website or a tool. You are at the right place. We will work together to bring your idea to life.</p>
+							</div>
+						</div>
+						<div class="serviceCard">
+							<div class="serviceCardBox">
+								<h1>Logos</h1>
+								<p> Need a cool logo to represent your organisation? All you have to do is contact me!!!</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="contactScreen" id="screenThree">
+				<div class="contactContent">
+					<div>
+						<h1>Need business quotations?</h1>
+						<h2>want to work with me?</h2>
+						<input type="text" placeholder="Name">
+						<input type="email" placeholder="Email">
+						<textarea placeholder="Message"></textarea>
+					</div>
+				</div>
+			</div>
+		</div>
+	</article>
+	<div id="footerContent" class="footerContainer">
+		<div class="iconContainer">
+			<a href="facebook.com" class="icon">
+				<i class="fab fa-facebook-f"></i>
+			</a>
+			<a href="linkedin.com" class="icon">
+				<i class="fab fa-linkedin-in"></i>
+			</a>
+			<a href="codepen.com" class="icon">
+				<i class="fab fa-codepen"></i>
+			</a>
+		</div>
+		<div>
+			<span class="contact">
+				<span>Contact me @</span> 
+				<p>
+					<span class="email"> akhil.singh0003@gmail.com</span>
+					<span class="mobile"> +91-8146685194</span>
+				</p>
+			</span>
+		</div>
+	</div>
+
+
+	<script type="text/javascript">
+		var one=document.getElementById('screenOne');
+		var two=document.getElementById('screenTwo');
+		var three=document.getElementById('screenThree');
+		var nav = document.getElementById('mobileMenu');
+		var footer = document.getElementById('footerContent');
+		var width=document.body.offsetWidth;
+		console.log(width);
+
+		function path(path){
+			if(path=='screenOne'){
+				one.style.display="block";
+				two.style.display="none";
+				three.style.display="none";
+				nav.classList.toggle("hide");
+				footer.style.display="flex";
+			}
+			else if(path=="screenTwo"){
+				one.style.display="none";
+				two.style.display="block";
+				three.style.display="none";
+				nav.classList.toggle("hide");
+				if(width<965){
+					footer.style.display="none";
+				}
+				
+			}
+			else{
+				one.style.display="none";
+				two.style.display="none";
+				three.style.display="block";
+				nav.classList.toggle("hide");
+				footer.style.display="flex";
+			}
+		}
+
+		function showMenu(){
+			var width = document.documentElement.clientWidth;
+			if(width<=500){
+				nav.classList.toggle("hide");
+			}
+	   }
+	</script>
+</body>
+</html>
