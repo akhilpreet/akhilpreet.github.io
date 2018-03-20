@@ -110,7 +110,7 @@ textarea{
 }
 
 .heroImageText{
-	margin-top: -40%;
+	margin-top: -10%;
 }
 
 .heroImageText>div{
@@ -326,7 +326,7 @@ textarea{
 		height: 100vh;
 	}
 	
-	.nav, header{
+	.nav{
 		position: absolute;
 		height:100%;
 		width:50%;
@@ -339,7 +339,8 @@ textarea{
 	    flex-direction: column-reverse;
 	}
 	header{
-		width: 100%;
+		height:100%;
+		transition:0.5s;
 	}
 	.hide{
 		left:-50%;
