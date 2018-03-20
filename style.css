@@ -3,6 +3,7 @@ body{
 	padding:0;
 	font-family: 'Montserrat', sans-serif;
 	/*background: #5a878d;*/
+	position:relative;
 }
 header{
 	height:12vh;
