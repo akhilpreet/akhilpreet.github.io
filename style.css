@@ -110,7 +110,7 @@ textarea{
 }
 
 .heroImageText{
-	margin-top: -80px;
+	margin-top: -40%;
 }
 
 .heroImageText>div{
@@ -357,11 +357,12 @@ textarea{
 	}
 	.serviceCard{
 		flex:1;
-		margin-top: 12px;
-    	width: 80%;
+		margin-top: 3%;
+    		width: 80%;
 	}
 	.container{
 		margin-top: 12%;
+		height:88%;
 	}
 
 	input, textarea{
